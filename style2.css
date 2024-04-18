@@ -1,0 +1,357 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead, th,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.container {
+    width: 100%;
+    font-size: 17px;
+    line-height: 20px;
+    background-image: url(background.webp);
+}
+
+.pengertian {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    text-align: center; /* Pusatkan konten */
+    background-color: #E5D283;
+    padding: 30px;
+}
+
+.tekspengertian {
+    margin-bottom: 20px; /* Atur jarak bawah antara teks dan gambar */
+}
+
+.tekspengertian h1 {
+    font-size: 50px;
+}
+
+.gambarpengertian img {
+    max-width: 300px; /* Atur lebar gambar agar tidak melebihi lebar container */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan proporsi aslinya */
+    padding-right:0;
+    justify-content: end;
+}
+
+/* Media queries untuk tampilan responsif */
+@media (min-width: 768px) {
+    .pengertian {
+        flex-direction: row; /* Kembali ke tata letak flex arah baris pada layar yang lebih besar */
+        text-align: left; /* Kembali ke tata letak kiri untuk teks */
+    }
+
+    .gambarpengertian {
+        margin-left: 30px; /* Kembalikan margin kiri untuk gambar */
+    }
+}
+
+
+
+.struktursel {
+	background-color: #F0F0F0;
+	padding: 30px;
+	position: relative;
+	height: 475px;
+	
+}
+
+.struktursel h2 {
+	font-size: 30px;
+}
+
+.gambar {
+	max-width: 400px;
+	height: auto;
+	position: absolute; 
+	transform: translate(460px, 80px);
+}
+
+.navigation {
+	position: absolute;
+	top: 280px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.prev, .next {
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+.h2organel {
+	font-size: 30px;
+	padding: 30px;
+}
+
+.pengelompokanstruktur {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.kel1,
+.kel2,
+.kel3,
+.kel4,
+.kel5,
+.kel6 {
+    flex: 1;
+    margin: 20px 30px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.kel1 img,
+.kel2 img,
+.kel3 img,
+.kel4 img,
+.kel5 img,
+.kel6 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.kelompokk { 
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .pengelompokanstruktur {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kel1,
+    .kel2,
+    .kel3,
+    .kel4,
+    .kel5,
+    .kel6 {
+        width: calc(40% - 10px);
+        margin: 5px 0;
+    }
+}
+
+
+.introsito-membran,
+.introsintesisprotein,
+.introsintesisenergi,
+.introorganelberenzim,
+.intrositoskeleton,
+.introkhusus, 
+.introcontohsoal {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    text-align: center; /* Pusatkan konten */
+    background-color: #E5D283;
+    padding: 30px;
+}
+
+.gambars-membran img,
+.gambars-protein img,  
+.gambars-energi img,
+.gambaro-enzim img,
+.gambaro-sitoskeleton img,
+.gambaro-khusus img {
+    max-width: 150px; /* Membatasi lebar gambar agar tidak melebihi lebar container */
+    height: auto; /* Memastikan gambar tetap proporsional */
+}
+
+.tekss-membran,
+.tekss-protein,
+.tekss-energi,
+.tekso-enzim,
+.tekso-sitoskeleton,
+.tekso-khusus,
+.tekso-contohsoal {
+    margin-right: auto; /* Untuk membuat teks berada di sebelah kiri */
+    margin-left: 0; /* Menghilangkan margin kiri untuk menghindari spasi tambahan */
+	margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tekss-membran h3,
+.tekss-protein h3,
+.tekss-energi h3,
+.tekso-enzim h3,
+.tekso-sitoskeleton h3,
+.tekso-khusus h3,
+.tekso-contohsoal h3 {
+    font-size: 50px;
+}
+
+/* Media queries untuk tampilan responsif */
+@media (min-width: 768px) {
+    .introsito-membran,
+    .introsintesisprotein,
+    .introsintesisenergi,
+    .introorganelberenzim,
+    .intrositoskeleton,
+    .introkhusus, 
+    .introcontohsoal {
+        flex-direction: row; /* Kembali ke tata letak flex arah baris pada layar yang lebih besar */
+        text-align: left; /* Kembali ke tata letak kiri untuk teks */
+    }
+
+    .gambars-membran,
+    .gambars-protein, 
+    .gambars-energi,
+    .gambaro-enzim,
+    .gambaro-sitoskeleton,
+    .gambaro-khusus {
+        margin-left: 30px; /* Kembalikan margin kiri untuk gambar */
+    }
+}
+
+.organel {
+    font-size: 37px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Pusatkan konten secara horizontal */
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-container img {
+    max-width: 50%;
+}
+
+.sitoplasma,
+.membransel,
+.nukleus,
+.ribosom,
+.RE,
+.badangolgi,
+.mitokondria,
+.kloroplas,
+.lisosom,
+.peroksisom,
+.mikrotubulus,
+.filamenintermediate,
+.mikrofilamen,
+.dindingsel,
+.plastida,
+.vakuola,
+.sentriol {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.pertanyaan { 
+    width: 90%;
+    margin: auto;
+    background-color: cornsilk;
+    padding: 30px;
+}
+
+.pertanyaan p { 
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.pertanyaan img { 
+    max-width: 30%;
+}
+
+.jawaban {
+    width: 90% ;
+    margin: auto;
+    background-color: #F0F0F0;
+    display: none; /* Mulai dengan menyembunyikan jawaban */
+    padding: 10px;
+}
+
+.botton-answer {
+    display: inline-block;
+    padding: 10px 20px;
+    /*background-color: #007bff;*/
+    background-color: rgb(99, 122, 159, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Membuat ujung tombol menjadi agak bulat */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efek transisi ketika tombol dihover */
+}
+
+.botton-answer:hover {
+    /*background-color: #0056b3;*/ /* Warna tombol akan menjadi lebih gelap saat dihover */
+    background-color: rgb(99, 122, 159, 1);
+}
+
+
+table, th, td {
+    border: 1px solid black; /* Ketebalan border */
+    padding: 10px; /* Padding di dalam sel */
+}
